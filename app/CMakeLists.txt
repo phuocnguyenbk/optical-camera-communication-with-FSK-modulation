@@ -3,8 +3,8 @@
 # value of 3.4.0 or lower.
 
 #Added 2 path definitions to support 20160825 additions
-set(pathToProject C:/Users/Owner/AndroidStudioProjects/HelloCv)
-set(pathToOpenCv C:/Users/Owner/OpenCV-3.1.0-android-sdk)
+set(pathToProject /Users/ma107/AndroidStudioProjects/HelloCv)
+set(pathToOpenCv /Users/ma107/Desktop/OpenCV-android-sdk)
 
 #Added by the IDE on project create
 cmake_minimum_required(VERSION 3.4.1)

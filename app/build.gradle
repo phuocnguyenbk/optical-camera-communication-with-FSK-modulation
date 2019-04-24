@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.company.cpp.hellocv"
-        minSdkVersion 19
-        targetSdkVersion 24
+        minSdkVersion 21
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -19,14 +18,14 @@ android {
                 //DRS 20160822h - Added 1.  Later replaced by 20160825
                 //abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a'
                 //DRS 20160825 - Suggestion by Bruno Alexandre Krinski
-                abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64'
+                abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
             }
         }
     }
     //DRS 20160822h - Added sourceSets
     sourceSets {
         main {
-            jniLibs.srcDirs = ['C:\\Users\\Owner\\AndroidStudioProjects\\HelloCv\\app\\src\\main\\jniLibs']
+            jniLibs.srcDirs = ['/Users/ma107/AndroidStudioProjects/HelloCv/app/src/main/jniLibs']
         }
     }
     buildTypes {
@@ -43,11 +42,11 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    testCompile 'junit:junit:4.12'
-    compile project(':openCVLibrary310')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+//    testImplementaion 'junit:junit:4.12'
+    implementation project(path: ':openCVLibrary310')
 }

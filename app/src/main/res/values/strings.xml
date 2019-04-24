@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">HelloCv</string>
+    <string name="app_name">OpenCv Camera</string>
+    <string name="video_button">Video Record Button</string>
+    <string name="camera_but">Camera Capture Button</string>
 </resources>
